@@ -39,8 +39,9 @@ const Apiurl = 'https://1rcwozojf0.execute-api.ap-northeast-2.amazonaws.com/prod
 
 export default {
   name: 'list',
-  components: {
-
+  props: {
+    board : Object,
+    category :Array,
   },
   data () {
     return {
@@ -49,6 +50,7 @@ export default {
       ads: [],
       pages: 10,
       loading: false,
+      categoryCount: [1,2,3],
       ord: 'asc'
     }
   },
@@ -77,7 +79,7 @@ export default {
         params: {
           page: 1,
           ord: this.ord,
-          category: [1,2,3],
+          category: this.categoryCount,
           limit: this.pages
         }
       })
@@ -127,6 +129,12 @@ export default {
       } else if(e.target.textContent === "내림차순") {
         self.ord = 'desc';
       }
+    },
+    getCategoryName() {
+      const categoryName = this.category.filter(
+        list => list.id === this.board.category_id
+      );
+      return categoryName[0].name;
     },
   }
 }
