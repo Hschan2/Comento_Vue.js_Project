@@ -45,7 +45,6 @@
 
 <script>
 import axios from 'axios'
-import ads from './ads'
 
 const Apiurl = 'https://1rcwozojf0.execute-api.ap-northeast-2.amazonaws.com/production'
 
@@ -54,9 +53,6 @@ export default {
   props: {
     board : Object,
     category :Array,
-  },
-  components: {
-    ads
   },
   data () {
     return {
