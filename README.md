@@ -1,6 +1,8 @@
 # comento-project
 
-> 코멘토 Vue.js 
+> 코멘토 Vue.js<br>
+> 코멘토에서 제공하는 API를 사용 및 호출해야 한다
+
 
 # 성공
 
