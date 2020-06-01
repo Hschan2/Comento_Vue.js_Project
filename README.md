@@ -1,6 +1,6 @@
 # comento-project
 
-> comento-subject
+> 코멘토 Vue.js 
 
 # 성공
 
